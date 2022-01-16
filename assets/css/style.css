@@ -1,0 +1,273 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #181719;
+	color: #fff;
+	overflow-x: hidden;
+	min-height: 100vh;
+	display: grid;
+	align-content: center;
+}
+
+.img-fluid {
+	width: 100%;
+}
+.container {
+	max-width: 23rem;
+	padding: 1rem;
+	margin: 0 auto;
+}
+@media (min-width: 768px) {
+	.container {
+		max-width: 50rem;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		max-width: 70rem;
+	}
+}
+header {
+	padding: 2rem 0;
+	position: fixed;
+	width: 100%;
+	background-color: #181719;
+	z-index: 10;
+}
+nav {
+	display: flex;
+	align-items: center;
+}
+.nav-brand {
+	border: 1px solid #fff;
+	display: inline-block;
+	padding: 0.5rem;
+}
+.nav-btn {
+	margin-left: auto;
+	z-index: 2;
+}
+.nav-brand p {
+	font-family: 'Crimson Pro';
+	font-size: 14px;
+	font-weight: 200;
+	line-height: 16px;
+	letter-spacing: 0em;
+	text-transform: uppercase;
+}
+.visible {
+	transform: translateX(0) !important;
+}
+.nav-nav {
+	background: #181719;
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	transform: translateX(100vw);
+	transition: transform 500ms ease-in-out;
+	padding: 2rem 0;
+}
+@media (min-width: 768px) {
+	.nav-nav {
+		background: #181719;
+		position: static;
+		width: inherit;
+		margin: 0;
+		margin-left: auto;
+		text-align: start;
+		padding: 0;
+		height: 3rem;
+		transform: translateX(0);
+	}
+	.nav-nav ul {
+		display: flex;
+		gap: 2rem;
+	}
+	.nav-btn {
+		display: none;
+	}
+	.nav-link {
+		font-size: 14px !important;
+	}
+	.image img {
+		max-width: 32rem;
+	}
+}
+.nav-nav ul {
+	list-style: none;
+	line-height: 4rem;
+	margin-top: 8rem;
+}
+.nav-item {
+	position: relative;
+}
+.active::before {
+	content: '';
+	position: absolute;
+	top: 3.3rem;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	background-color: #fff;
+	height: 2px;
+	width: 3rem;
+	margin: 0 auto;
+	border-radius: 2px;
+}
+.nav-link {
+	text-decoration: none;
+	color: #fff;
+	font-family: Montserrat;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 22px;
+}
+.nav-btn {
+	border: none;
+	background: none;
+	color: #fff;
+}
+
+h1 {
+	font-family: Lora;
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 61px;
+}
+.content .description {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	margin: 1rem 0;
+}
+.split a {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 17px;
+	color: #fff;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+}
+.split a .material-icons {
+	margin-left: 1rem;
+}
+.image {
+	margin-top: 1rem;
+	position: relative;
+}
+@media (min-width: 768px) {
+	.split {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.content {
+		width: 25rem;
+	}
+	h1 {
+		font-size: 48px;
+	}
+	.content .description {
+		font-size: 20px;
+		line-height: 29px;
+		font-weight: normal;
+	}
+	.split a {
+		font-size: 18px;
+		font-weight: 500;
+	}
+	.nav-nav ul {
+		margin-top: 0rem;
+	}
+}
+main {
+	margin-top: 8rem;
+}
+.box-container {
+	background: #181719;
+	width: 24rem;
+	position: absolute;
+	right: 3rem;
+	bottom: -3rem;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	padding: 1.5rem;
+}
+footer {
+	margin: 5rem 0;
+}
+footer p {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	color: #a9a9a9;
+}
+
+.author {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.author h5 {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+}
+.author p {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 15px;
+	color: #828282;
+	margin: 0.3rem 0;
+}
+.avatar {
+	width: 3rem;
+}
+.avatar img {
+	border-radius: 100%;
+	overflow: hidden;
+}
+.box-container .content {
+	font-family: Lora;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 31px;
+	width: 16rem;
+	margin-top: 0.5rem;
+}
+@media (max-width: 768px) {
+	.box-container {
+		width: 18rem;
+		right: 0;
+		bottom: -2rem;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		padding: 1rem 1.5rem;
+	}
+	.box-container .content {
+		font-size: 15px;
+		line-height: 24px;
+	}
+}
